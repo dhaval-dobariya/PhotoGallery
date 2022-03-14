@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailsViewController" customModule="Photo_Gallery" customModuleProvider="target">
+            <connections>
+                <outlet property="photoImageView" destination="Y2Y-QG-08t" id="1kV-pk-1Vg"/>
+                <outlet property="scrollView" destination="pUo-J5-GLo" id="niC-T9-TxC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsh-xo-VCu">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-J5-GLo">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-QG-08t">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Y2Y-QG-08t" secondAttribute="trailing" id="ODe-tt-38c"/>
+                                <constraint firstAttribute="bottom" secondItem="Y2Y-QG-08t" secondAttribute="bottom" id="aI2-yG-sRn"/>
+                                <constraint firstItem="Y2Y-QG-08t" firstAttribute="centerX" secondItem="pUo-J5-GLo" secondAttribute="centerX" id="fRh-4K-d6X"/>
+                                <constraint firstItem="Y2Y-QG-08t" firstAttribute="top" secondItem="pUo-J5-GLo" secondAttribute="top" id="j24-S4-nQV"/>
+                                <constraint firstItem="Y2Y-QG-08t" firstAttribute="centerY" secondItem="pUo-J5-GLo" secondAttribute="centerY" id="roe-2g-4tK"/>
+                                <constraint firstItem="Y2Y-QG-08t" firstAttribute="leading" secondItem="pUo-J5-GLo" secondAttribute="leading" id="vSe-TB-Bmw"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="iQu-ai-0J2"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="fKb-fa-9XH"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="aZX-wA-Mb8"/>
+                            </connections>
+                        </scrollView>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKk-MP-uc2">
+                            <rect key="frame" x="369" y="15" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="MKk-MP-uc2" secondAttribute="height" multiplier="1:1" id="SwU-av-Lvf"/>
+                                <constraint firstAttribute="width" constant="30" id="oil-nl-g9B"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="close"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="Jaj-xD-2v6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Y2Y-QG-08t" firstAttribute="width" secondItem="jsh-xo-VCu" secondAttribute="width" priority="250" id="04V-3n-q3Q"/>
+                        <constraint firstAttribute="trailing" secondItem="MKk-MP-uc2" secondAttribute="trailing" constant="15" id="7FD-P5-R7g"/>
+                        <constraint firstItem="Y2Y-QG-08t" firstAttribute="height" secondItem="jsh-xo-VCu" secondAttribute="height" id="VEQ-Ji-VnZ"/>
+                        <constraint firstItem="MKk-MP-uc2" firstAttribute="top" secondItem="jsh-xo-VCu" secondAttribute="top" constant="15" id="d3d-15-JBq"/>
+                        <constraint firstAttribute="trailing" secondItem="pUo-J5-GLo" secondAttribute="trailing" id="eFp-lc-sp7"/>
+                        <constraint firstAttribute="bottom" secondItem="pUo-J5-GLo" secondAttribute="bottom" id="tlP-yG-VDP"/>
+                        <constraint firstItem="pUo-J5-GLo" firstAttribute="leading" secondItem="jsh-xo-VCu" secondAttribute="leading" id="waS-m5-4UO"/>
+                        <constraint firstItem="pUo-J5-GLo" firstAttribute="top" secondItem="jsh-xo-VCu" secondAttribute="top" id="zzD-tB-tr0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jsh-xo-VCu" secondAttribute="trailing" id="DcN-EU-y3E"/>
+                <constraint firstItem="jsh-xo-VCu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jev-Rl-2Op"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jsh-xo-VCu" secondAttribute="bottom" id="NW2-Yc-t1g"/>
+                <constraint firstItem="jsh-xo-VCu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="a6c-Oi-UGG"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="108"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="15" height="15"/>
+    </resources>
+</document>
